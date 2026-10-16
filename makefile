@@ -7,7 +7,7 @@ PKG_LIBS = $(shell pkg-config --libs sdl2 SDL2_ttf freetype2 harfbuzz)
 # Source files and target
 SRC = main.c la.c editor.c
 OBJ = $(SRC:.c=.o)
-TARGET = NAmo
+TARGET = namo
 
 # Default rule
 all: $(TARGET)

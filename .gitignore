@@ -1,0 +1,15 @@
+# Build artifacts
+*.o
+NAmo
+namo
+a.out
+
+# Private notes
+TODO
+TODO.txt
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

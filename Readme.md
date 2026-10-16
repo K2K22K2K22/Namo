@@ -7,25 +7,13 @@
 ---
 
 ## 🚀 Why Namo?
-- 🎨 **Designed for AKshar** – Provides a specialized environment for AKshar coding.
-- ⚡ **Lightweight & Fast** – Built in C for maximum performance.
-- 🏗️ **Custom Features** – Tailored to enhance productivity for Sanskrit-based programming.
-- 🔄 **Multi-Language Support** – Future-ready with planned support for various languages.
-- 🎯 **Unique Developer Experience** – Provides intuitive tools for effortless coding.
-- ⌨️ **Future Sanskrit Keyboard Support** – Planned on-screen working keyboard synced with the physical keyboard, featuring a **Sanskrit layout** for easier typing.
-- 🎞️ **Unmatched Visual Experience** – Namo will have **a unique animation experience while coding**, something that **can't be described in words—you have to try it yourself!**
-
----
-
-## 🔧 Features
-✅ **Syntax Highlighting** – Enhances readability of AKshar programs.<br>
-✅ **Code Execution** – Integrated support for running AKshar scripts.<br>
-✅ **Lightweight & Fast** – Optimized for speed and minimal resource usage.<br>
-✅ **Multi-File Support** – Edit multiple files seamlessly.<br>
-✅ **Keyboard Shortcuts** – Efficient navigation and coding.<br>
-✅ **Future-Proofed** – Planned expansions for multiple programming languages.<br>
-✅ **Sanskrit On-Screen Keyboard** – Touchscreen-compatible keyboard for a seamless typing experience.<br>
-✅ **Immersive Animations** – A dynamic visual experience that enhances coding like never before.<br>
+- 🎨 **Designed for AKshar**: Provides a specialized environment for AKshar coding.
+- ⚡ **Lightweight & Fast**: Built in C for maximum performance.
+- 🏗️ **Custom Features**: Tailored to enhance productivity for Sanskrit-based programming.
+- 🔄 **Multi-Language Support**: Future-ready with planned support for various languages.
+- 🎯 **Unique Developer Experience**: Provides intuitive tools for effortless coding.
+- ⌨️ **Future Sanskrit Keyboard Support**: Planned on-screen working keyboard synced with the physical keyboard, featuring a **Sanskrit layout** for easier typing.
+- 🎞️ **Unmatched Visual Experience**: Namo will have **a unique animation experience while coding**, something that **can't be described in words; you have to try it yourself!**
 
 ---
 
@@ -56,14 +44,16 @@ Editing a AKshar file:
 ## 🤝 Contributing
 We welcome contributions! Help us improve Namo and expand its functionality.
 
+By participating in this project, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ---
 
 ## 📜 License
-Namo is **open-source** under the **GNU License**.
+Namo is **open-source** under the **GNU General Public License v3.0 or later (GPL-3.0-or-later)**. See the [LICENSE](LICENSE) file for the full text.
 
 ---
 
 ## 🌐 Community & Support
-📩 **Contact the Devs**: AK & Dishant at *[herogupta626@protonmail.com]* and *[dishantsinghrathore786@gmail.com]*
+📩 **Contact the Devs**: AK & Dishant at *[herogupta626@gmail.com]* and *[dishantsinghrathore786@gmail.com]*
 
 🚀 Join us in shaping the future of text editing with Namo!
