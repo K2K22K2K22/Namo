@@ -1,59 +1,58 @@
 # Namo 
       ~ The Namo Text-Editor
 
-## 🔥 Introduction
+## Introduction
 **Namo** is a custom-built **text editor** designed exclusively for the AKshar programming language. Developed in **C**, Namo provides a unique and seamless coding experience tailored for writing and executing AKshar programs. While built for AKshar, we aim to make it compatible with multiple programming languages, making it a versatile editor for developers.
 
----
+With its emphasis on performance, specialized tooling, and a distinctive visual experience, Namo aims to make writing code both efficient and enjoyable.
 
-## 🚀 Why Namo?
-- 🎨 **Designed for AKshar**: Provides a specialized environment for AKshar coding.
-- ⚡ **Lightweight & Fast**: Built in C for maximum performance.
-- 🏗️ **Custom Features**: Tailored to enhance productivity for Sanskrit-based programming.
-- 🔄 **Multi-Language Support**: Future-ready with planned support for various languages.
-- 🎯 **Unique Developer Experience**: Provides intuitive tools for effortless coding.
-- ⌨️ **Future Sanskrit Keyboard Support**: Planned on-screen working keyboard synced with the physical keyboard, featuring a **Sanskrit layout** for easier typing.
-- 🎞️ **Unmatched Visual Experience**: Namo will have **a unique animation experience while coding**, something that **can't be described in words; you have to try it yourself!**
+## Why Namo?
 
----
+- **Built for AKshar:** A dedicated coding environment for writing AKshar programs.
+- **Lightweight and Fast:** Developed in C with a focus on performance and efficiency.
+- **Purpose-Built Features:** Designed around the needs of Sanskrit-inspired programming.
+- **Multi-Language Support:** Planned support for additional programming languages.
+- **Distinctive Visual Experience:** Unique animations designed to make coding more engaging.
+- **Sanskrit Keyboard Support:** Planned on-screen keyboard with a Sanskrit layout, synchronized with physical keyboard input.
 
-## 📜 How It Works
-1. Open Namo and write AKshar code.
-2. Use built-in shortcuts for compiling and running scripts.
-3. Enjoy a distraction-free and optimized coding environment.
+## Getting Started
 
----
-## Dependencies
+Launch Namo from your terminal:
 
-- [SDL2](https://github.com/libsdl-org/SDL/releases)  
-- [FreeType](https://download.savannah.gnu.org/releases/freetype/)
-
-
-## 💻 Example Usage
-To open Namo and start coding:
 ```bash
 ./namo
 ```
-Editing a AKshar file:
+
+To open an existing AKshar source file:
+
 ```bash
 ./namo myfile.aks
 ```
 
----
+Once the editor is open, write your AKshar code and use the built-in shortcuts to compile and run your programs.
 
-## 🤝 Contributing
-We welcome contributions! Help us improve Namo and expand its functionality.
+## Dependencies
 
-By participating in this project, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+Namo requires the following libraries:
 
----
+- [SDL2](https://github.com/libsdl-org/SDL/releases) for multimedia and rendering support.
+- [FreeType](https://download.savannah.gnu.org/releases/freetype/) for font rendering.
 
-## 📜 License
-Namo is **open-source** under the **GNU General Public License v3.0 or later (GPL-3.0-or-later)**. See the [LICENSE](LICENSE) file for the full text.
+Refer to the project's build instructions for installation and compilation details.
 
----
+## Contributing
 
-## 🌐 Community & Support
-📩 **Contact the Devs**: AK & Dishant at *[herogupta626@gmail.com]* and *[dishantsinghrathore786@gmail.com]*
+Contributions are welcome. Whether you want to improve existing functionality, introduce new features, or help expand language support, your contributions can help shape Namo's development.
 
-🚀 Join us in shaping the future of text editing with Namo!
+By participating, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+Namo is open-source software licensed under the **GNU General Public License v3.0 or later (GPL-3.0-or-later)**. See the [LICENSE](LICENSE) file for the complete license terms.
+
+## Community and Support
+
+For questions, suggestions, or collaboration, contact the developers:
+
+- **AK:** [herogupta626@gmail.com](mailto:herogupta626@gmail.com)
+- **Dishant:** [dishantsinghrathore786@gmail.com](mailto:dishantsinghrathore786@gmail.com)
