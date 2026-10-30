@@ -217,6 +217,12 @@ int main(int argc, char **argv)
         file_path = argv[1];
     }
 
+    if (file_path) {
+        if (!editor_load_from_file(&editor, file_path)) {
+            exit(1);
+        }
+    }
+
     scc(SDL_Init(SDL_INIT_VIDEO));
 
     SDL_Window *window =

@@ -24,6 +24,10 @@ static void line_grow(Line *line, size_t n) {
 
     if (new_capacity != line->capacity) {
         line->chars = realloc(line->chars, new_capacity);
+        if (line->chars == NULL) {
+            fprintf(stderr, "ERROR: out of memory\n");
+            exit(1);
+        }
         line->capacity = new_capacity;
     }
 }
@@ -97,6 +101,10 @@ static void editor_grow(Editor *editor, size_t n) {
 
     if (new_capacity != editor->capacity) {
         editor->lines = realloc(editor->lines, new_capacity * sizeof(editor->lines[0]));
+        if (editor->lines == NULL) {
+            fprintf(stderr, "ERROR: out of memory\n");
+            exit(1);
+        }
         editor->capacity = new_capacity;
     }
 }
@@ -116,6 +124,9 @@ void editor_insert_new_line(Editor *editor) {
     editor->cursor_row += 1;
     editor->cursor_col = 0;
     editor->size += 1;
+    if (editor->cursor_row >= editor->size - 1) {
+        editor->trailing_newline = false;
+    }
 }
 
 static void editor_create_first_new_line(Editor *editor) {
@@ -184,7 +195,62 @@ void editor_save_to_file(const Editor *editor, const char *file_path) {
 
     for (size_t row = 0; row < editor->size; ++row) {
         fwrite(editor->lines[row].chars, 1, editor->lines[row].size, f);
-        fputc('\n', f);
+        if (row + 1 < editor->size || editor->trailing_newline) {
+            fputc('\n', f);
+        }
     }
     fclose(f);
+}
+
+bool editor_load_from_file(Editor *editor, const char *file_path) {
+    FILE *f = fopen(file_path, "r");
+    if (f == NULL) {
+        fprintf(stderr, "ERROR: couldn't open file '%s': %s\n", file_path, strerror(errno));
+        return false;
+    }
+
+    for (size_t row = 0; row < editor->size; ++row) {
+        free(editor->lines[row].chars);
+    }
+    free(editor->lines);
+    editor->lines = NULL;
+    editor->size = 0;
+    editor->capacity = 0;
+
+    int c;
+    bool have_line = false;
+    bool trailing_newline = false;
+
+    while ((c = fgetc(f)) != EOF) {
+        if (!have_line) {
+            editor_grow(editor, 1);
+            memset(&editor->lines[editor->size], 0, sizeof(editor->lines[0]));
+            editor->size += 1;
+            have_line = true;
+        }
+
+        if (c == '\n') {
+            trailing_newline = true;
+            have_line = false;
+        } else {
+            trailing_newline = false;
+            const char ch = (char) c;
+            line_append_text_sized(&editor->lines[editor->size - 1], &ch, 1);
+        }
+    }
+
+    const bool failed = ferror(f) != 0;
+    if (failed) {
+        fprintf(stderr, "ERROR: couldn't read file '%s': %s\n", file_path, strerror(errno));
+    }
+    fclose(f);
+
+    if (failed) {
+        return false;
+    }
+
+    editor->trailing_newline = trailing_newline;
+    editor->cursor_row = 0;
+    editor->cursor_col = 0;
+    return true;
 }

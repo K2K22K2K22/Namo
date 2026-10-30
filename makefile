@@ -9,6 +9,8 @@ SRC = main.c la.c editor.c
 OBJ = $(SRC:.c=.o)
 TARGET = namo
 
+.PHONY: all clean test
+
 # Default rule
 all: $(TARGET)
 
@@ -18,6 +20,13 @@ $(TARGET): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) $(PKG_CFLAGS) -c $< -o $@
 
+# Test rule
+test: test_editor
+	./test_editor
+
+test_editor: test_editor.c editor.c editor.h
+	$(CC) $(CFLAGS) -o $@ test_editor.c editor.c
+
 # Clean rule
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ) $(TARGET) test_editor
